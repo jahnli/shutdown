@@ -12,7 +12,6 @@ protocol.registerSchemesAsPrivileged([
 
 function createWindow() {
   win = new BrowserWindow({
-    icon: path.join(__dirname,'../public/logo.ico'),
     width: 500,
     height: 400,
     resizable:false,
@@ -22,7 +21,7 @@ function createWindow() {
   });
   require('./main-process/ipcMain');
   require('./main-process/tray');
-  win.webContents.openDevTools();
+  win.openDevTools();
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
   } else {
