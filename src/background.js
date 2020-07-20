@@ -21,7 +21,7 @@ function createWindow() {
   });
   require('./main-process/ipcMain');
   require('./main-process/tray');
-  win.openDevTools();
+  // win.openDevTools();
   if (process.env.WEBPACK_DEV_SERVER_URL) {
     win.loadURL(process.env.WEBPACK_DEV_SERVER_URL)
   } else {
