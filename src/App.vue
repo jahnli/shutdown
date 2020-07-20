@@ -35,9 +35,8 @@
               valueFormat="X"
       />
     </a-row>
-    <a-row>
+    <a-row v-if="timer">
       <a-statistic-countdown
-              v-if="timer"
               title="倒计时"
               :value="count"
       />
@@ -167,14 +166,15 @@
 <style lang="less">
   #app{
     width:80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin: 0 auto;
     padding: 30px 0;
   }
   .input-area{
     min-width: 120px;
-  }
-  .area{
-    margin: 30px 0 60px 0;
   }
   .handle-area{
     margin-left: 20px;

@@ -12,6 +12,7 @@ protocol.registerSchemesAsPrivileged([
 
 function createWindow() {
   win = new BrowserWindow({
+    icon:path.join(__static,'icon.png'),
     width: 500,
     height: 400,
     resizable:false,
