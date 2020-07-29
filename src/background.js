@@ -20,6 +20,7 @@ function createWindow() {
       nodeIntegration:true
     }
   });
+  win.setMenu(null);
   require('./main-process/ipcMain');
   require('./main-process/tray');
   // win.openDevTools();
